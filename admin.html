@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        🌾 Farmer Service - Admin
+    </div>
+
+</header>
+
+<main class="admin-container">
+
+    <h1>Admin Dashboard</h1>
+
+    <div class="admin-grid">
+
+        <div class="admin-card">
+            <h2>👨‍🌾 Farmers</h2>
+            <p>Manage farmer information</p>
+        </div>
+
+        <div class="admin-card">
+            <h2>📋 Schemes</h2>
+            <p>Add and update schemes</p>
+        </div>
+
+        <div class="admin-card">
+            <h2>📊 Applications</h2>
+            <p>Manage applications</p>
+        </div>
+
+        <div class="admin-card">
+            <h2>🔔 Notifications</h2>
+            <p>Send important updates</p>
+        </div>
+
+    </div>
+
+    <section class="admin-form">
+
+        <h2>Add New Scheme</h2>
+
+        <input
+            type="text"
+            id="newSchemeName"
+            placeholder="Scheme name"
+        >
+
+        <textarea
+            id="newSchemeDescription"
+            placeholder="Scheme description">
+        </textarea>
+
+        <button onclick="addScheme()"
+                class="primary-btn">
+            Add Scheme
+        </button>
+
+    </section>
+
+    <div id="adminMessage"></div>
+
+</main>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

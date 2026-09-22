@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Government Schemes</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">🌾 Farmer Service</div>
+
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="schemes.html">Schemes</a>
+        <a href="applications.html">Applications</a>
+        <a href="notifications.html">Notifications</a>
+    </nav>
+
+</header>
+
+<main class="page">
+
+    <h1>Government Schemes</h1>
+
+    <p>
+        Search and explore farmer-related government schemes.
+    </p>
+
+    <input
+        type="text"
+        id="schemeSearch"
+        class="search-box"
+        placeholder="Search schemes..."
+        onkeyup="searchSchemes()"
+    >
+
+    <div id="schemeContainer" class="scheme-grid">
+
+        <div class="scheme-card">
+
+            <h2>PM-KISAN</h2>
+
+            <p>
+                Information about eligible farmer support under
+                the PM-KISAN scheme.
+            </p>
+
+            <p><b>Category:</b> Financial Support</p>
+
+            <button onclick="showScheme('PM-KISAN')">
+                View Details
+            </button>
+
+        </div>
+
+        <div class="scheme-card">
+
+            <h2>Kisan Credit Card</h2>
+
+            <p>
+                Information about agricultural credit facilities
+                available through the KCC framework.
+            </p>
+
+            <p><b>Category:</b> Agricultural Credit</p>
+
+            <button onclick="showScheme('Kisan Credit Card')">
+                View Details
+            </button>
+
+        </div>
+
+        <div class="scheme-card">
+
+            <h2>Pradhan Mantri Fasal Bima Yojana</h2>
+
+            <p>
+                Information about crop insurance services
+                for eligible farmers.
+            </p>
+
+            <p><b>Category:</b> Crop Insurance</p>
+
+            <button onclick="showScheme('PMFBY')">
+                View Details
+            </button>
+
+        </div>
+
+    </div>
+
+</main>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
