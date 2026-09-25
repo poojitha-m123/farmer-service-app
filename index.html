@@ -147,10 +147,109 @@
 
 </footer>
 
+<script>
 
-<!-- VOICE AI JAVASCRIPT -->
-<script src="js/voice-ai.js"></script>
-<script scr="js/language.js"></script>
+const translations = {
+    en: {
+        logo: "Farmer Service",
+        home: "Home",
+        schemes: "Schemes",
+        login: "Login",
+        register: "Register",
+        aiAssistant: "🤖 AI Assistant",
+        title: "Farmer Service App",
+        description: "A digital platform connecting farmers with government schemes and agricultural services.",
+        getStarted: "Get Started",
+        viewSchemes: "View Schemes",
+        aiFarmerAssistant: "🤖 AI Farmer Assistant",
+        ourServices: "Our Services",
+        governmentSchemes: "Government Schemes",
+        governmentSchemesText: "Find information about farmer-related government schemes.",
+        eligibility: "Eligibility",
+        eligibilityText: "Check eligibility requirements before applying.",
+        documents: "Documents",
+        documentsText: "View the documents required for different schemes.",
+        trackApplication: "Track Application",
+        trackApplicationText: "Track the status of supported applications.",
+        footer: "© 2026 Farmer Service App | Connecting Farmers with Government Services"
+    },
+
+    te: {
+        logo: "రైతు సేవ",
+        home: "హోమ్",
+        schemes: "పథకాలు",
+        login: "లాగిన్",
+        register: "నమోదు",
+        aiAssistant: "🤖 AI సహాయకుడు",
+        title: "రైతు సేవా యాప్",
+        description: "ప్రభుత్వ పథకాలు మరియు వ్యవసాయ సేవలను రైతులతో అనుసంధానించే డిజిటల్ వేదిక.",
+        getStarted: "ప్రారంభించండి",
+        viewSchemes: "పథకాలను చూడండి",
+        aiFarmerAssistant: "🤖 AI రైతు సహాయకుడు",
+        ourServices: "మా సేవలు",
+        governmentSchemes: "ప్రభుత్వ పథకాలు",
+        governmentSchemesText: "రైతులకు సంబంధించిన ప్రభుత్వ పథకాల సమాచారాన్ని తెలుసుకోండి.",
+        eligibility: "అర్హత",
+        eligibilityText: "దరఖాస్తు చేసుకునే ముందు అర్హత వివరాలను తనిఖీ చేయండి.",
+        documents: "పత్రాలు",
+        documentsText: "వివిధ పథకాలకు అవసరమైన పత్రాల వివరాలను చూడండి.",
+        trackApplication: "దరఖాస్తును ట్రాక్ చేయండి",
+        trackApplicationText: "మీ దరఖాస్తు స్థితిని తెలుసుకోండి.",
+        footer: "© 2026 రైతు సేవా యాప్ | రైతులను ప్రభుత్వ సేవలతో అనుసంధానం చేస్తుంది"
+    },
+
+    hi: {
+        logo: "किसान सेवा",
+        home: "होम",
+        schemes: "योजनाएँ",
+        login: "लॉगिन",
+        register: "पंजीकरण",
+        aiAssistant: "🤖 AI सहायक",
+        title: "किसान सेवा ऐप",
+        description: "किसानों को सरकारी योजनाओं और कृषि सेवाओं से जोड़ने वाला डिजिटल प्लेटफॉर्म।",
+        getStarted: "शुरू करें",
+        viewSchemes: "योजनाएँ देखें",
+        aiFarmerAssistant: "🤖 AI किसान सहायक",
+        ourServices: "हमारी सेवाएँ",
+        governmentSchemes: "सरकारी योजनाएँ",
+        governmentSchemesText: "किसानों से संबंधित सरकारी योजनाओं की जानकारी प्राप्त करें।",
+        eligibility: "पात्रता",
+        eligibilityText: "आवेदन करने से पहले पात्रता आवश्यकताओं की जाँच करें।",
+        documents: "दस्तावेज़",
+        documentsText: "विभिन्न योजनाओं के लिए आवश्यक दस्तावेज़ देखें।",
+        trackApplication: "आवेदन ट्रैक करें",
+        trackApplicationText: "अपने आवेदन की स्थिति को ट्रैक करें।",
+        footer: "© 2026 किसान सेवा ऐप | किसानों को सरकारी सेवाओं से जोड़ना"
+    }
+};
+
+
+function changeLanguage(language) {
+
+    document.querySelectorAll("[data-lang]").forEach(function(element) {
+
+        const key = element.getAttribute("data-lang");
+
+        if (translations[language][key]) {
+            element.textContent = translations[language][key];
+        }
+
+    });
+
+    localStorage.setItem("selectedLanguage", language);
+}
+
+
+window.onload = function() {
+
+    const savedLanguage = localStorage.getItem("selectedLanguage") || "en";
+
+    document.getElementById("siteLanguage").value = savedLanguage;
+
+    changeLanguage(savedLanguage);
+};
+
+</script>
 
 </body>
 </html>
