@@ -1,0 +1,428 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7f2;
+    color: #222;
+}
+
+/* Header */
+
+header {
+    background: #1b5e20;
+    color: white;
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Hero */
+
+.hero {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    padding: 60px 8%;
+    background: linear-gradient(
+        rgba(27, 94, 32, 0.8),
+        rgba(27, 94, 32, 0.8)
+    ),
+    url("../images/farmer.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 650px;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 52px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+/* Buttons */
+
+.primary-btn,
+.secondary-btn,
+.scheme-card button {
+    display: inline-block;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.primary-btn {
+    background: #2e7d32;
+    color: white;
+}
+
+.secondary-btn {
+    background: white;
+    color: #1b5e20;
+}
+
+/* Features */
+
+.features {
+    padding: 50px 7%;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.feature-container {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.feature-card,
+.dashboard-card,
+.scheme-card,
+.admin-card,
+.notification {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+}
+
+.feature-card span,
+.dashboard-card span {
+    font-size: 40px;
+}
+
+.feature-card h3 {
+    margin: 15px 0;
+}
+
+/* Forms */
+
+.form-container {
+    width: 90%;
+    max-width: 450px;
+    margin: 60px auto;
+    background: white;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.form-container h1 {
+    margin-bottom: 25px;
+    color: #1b5e20;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+textarea {
+    min-height: 120px;
+}
+
+.form-container button {
+    width: 100%;
+    margin-top: 15px;
+}
+
+/* Dashboard */
+
+.dashboard,
+.page,
+.admin-container,
+.details-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.dashboard-grid,
+.admin-grid,
+.scheme-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.dashboard-card {
+    text-decoration: none;
+    color: #222;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-4px);
+}
+
+/* Schemes */
+
+.search-box {
+    max-width: 500px;
+    margin: 25px 0;
+    padding: 15px;
+}
+
+.scheme-card h2 {
+    color: #1b5e20;
+    margin-bottom: 15px;
+}
+
+.scheme-card p {
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.scheme-card button {
+    background: #2e7d32;
+    color: white;
+    margin-top: 15px;
+}
+
+/* Details */
+
+.details-container {
+    background: white;
+    padding: 35px;
+    border-radius: 10px;
+}
+
+.details-container h1 {
+    color: #1b5e20;
+    margin-bottom: 25px;
+}
+
+.details-container h2 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.details-container li {
+    margin: 8px 0;
+}
+
+/* Table */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    background: white;
+}
+
+th,
+td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background: #1b5e20;
+    color: white;
+}
+
+.status {
+    padding: 6px 10px;
+    border-radius: 5px;
+}
+
+.pending {
+    background: #fff3cd;
+}
+
+.approved {
+    background: #d4edda;
+}
+
+/* Notifications */
+
+.notification {
+    margin: 20px 0;
+    border-left: 5px solid #2e7d32;
+}
+
+.notification h3 {
+    color: #1b5e20;
+    margin-bottom: 10px;
+}
+
+/* Admin */
+
+.admin-form {
+    margin-top: 40px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    background: #1b5e20;
+    color: white;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    table {
+        font-size: 13px;
+    }
+}
+/* =================================
+   AI FARMER ASSISTANT
+================================= */
+
+.ai-page {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.ai-page h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.ai-page > p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.ai-card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.ai-card h2 {
+    margin-bottom: 15px;
+}
+
+.ai-card select,
+.ai-card textarea,
+.ai-card input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.ai-card textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.ai-card button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#aiQuestion,
+#aiAnswer,
+#schemeResult,
+#cropResult,
+#documentResult {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 8px;
+}
+/* LANGUAGE SELECTOR */
+
+#siteLanguage {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 10px;
+}
