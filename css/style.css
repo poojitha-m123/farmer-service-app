@@ -195,7 +195,6 @@ textarea {
     max-width: 1200px;
     margin: 40px auto;
 }
-
 .dashboard-grid,
 .admin-grid,
 .scheme-grid {
@@ -425,4 +424,19 @@ footer {
     cursor: pointer;
     font-weight: bold;
     margin-left: 10px;
+}
+/*FARMER SERVICE LOGO*/
+.logo {
+    display: flex;
+    align-item: center;
+    gap: 10px;
+}
+.logo img {
+    width: 60px;
+    height:60px;
+    object-fit: contain;
+}
+.logo span {
+    font-size: 24px;
+    font-weight: bold;
 }
