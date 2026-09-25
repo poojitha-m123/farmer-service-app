@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Farmer Assistant</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        🌾 Farmer Service
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="schemes.html">Schemes</a>
+        <a href="dashboard.html">Dashboard</a>
+    </nav>
+
+</header>
+
+
+<section class="ai-page">
+
+    <h1>🤖 AI Farmer Assistant</h1>
+
+    <p>
+        Get simple information about farmer schemes and services.
+    </p>
+
+
+    <!-- LANGUAGE -->
+
+    <div class="ai-card">
+
+        <h2>🌐 Select Language</h2>
+
+        <select id="languageSelect">
+
+            <option value="te-IN">
+                తెలుగు (Telugu)
+            </option>
+
+            <option value="hi-IN">
+                हिन्दी (Hindi)
+            </option>
+
+            <option value="en-IN">
+                English
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <!-- VOICE ASSISTANT -->
+
+    <div class="ai-card">
+
+        <h2>🎤 Voice Assistant</h2>
+
+        <p>
+            Ask your question using your voice.
+        </p>
+
+        <button onclick="startAIListening()">
+            🎤 Speak
+        </button>
+
+        <p id="aiQuestion">
+            Your question will appear here.
+        </p>
+
+        <p id="aiAnswer">
+            AI answer will appear here.
+        </p>
+
+    </div>
+
+
+    <!-- TEXT QUESTION -->
+
+    <div class="ai-card">
+
+        <h2>📝 Ask a Question</h2>
+
+        <textarea
+            id="questionInput"
+            placeholder="Type your question here..."
+        ></textarea>
+
+        <button onclick="askAI()">
+            🤖 Ask AI
+        </button>
+
+    </div>
+
+
+    <!-- SCHEME FINDER -->
+
+    <div class="ai-card">
+
+        <h2>🔎 AI Scheme Finder</h2>
+
+        <p>
+            Tell us what help you need.
+        </p>
+
+        <textarea
+            id="schemeQuestion"
+            placeholder="Example: I need financial support for farming"
+        ></textarea>
+
+        <button onclick="findScheme()">
+            🔎 Find Scheme
+        </button>
+
+        <div id="schemeResult"></div>
+
+    </div>
+
+
+    <!-- CROP RECOGNITION -->
+
+    <div class="ai-card">
+
+        <h2>🌾 Crop / Disease Recognition</h2>
+
+        <p>
+            Upload a crop or leaf image.
+        </p>
+
+        <input
+            type="file"
+            id="cropImage"
+            accept="image/*"
+            onchange="previewCropImage()"
+        >
+
+        <br><br>
+
+        <img
+            id="cropPreview"
+            style="max-width:300px; display:none;"
+        >
+
+        <br>
+
+        <button onclick="analyzeCrop()">
+            🔍 Analyze Image
+        </button>
+
+        <p id="cropResult"></p>
+
+    </div>
+
+
+    <!-- DOCUMENT UNDERSTANDING -->
+
+    <div class="ai-card">
+
+        <h2>📄 Document Understanding</h2>
+
+        <p>
+            Upload a document or image to get a simple explanation.
+        </p>
+
+        <input
+            type="file"
+            id="documentFile"
+            accept="image/*,.pdf"
+        >
+
+        <br><br>
+
+        <button onclick="analyzeDocument()">
+            📄 Explain Document
+        </button>
+
+        <p id="documentResult"></p>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <p>
+        © 2026 Farmer Service App
+    </p>
+
+</footer>
+
+
+<script src="js/ai-assistant.js"></script>
+
+</body>
+
+</html>
