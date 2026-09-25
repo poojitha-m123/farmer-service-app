@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Farmer Service App</title>
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -17,27 +19,47 @@
         <a href="schemes.html">Schemes</a>
         <a href="login.html">Login</a>
         <a href="register.html" class="btn">Register</a>
+        <a href="ai-assistant.html">🤖 AI Assistant</a>
+
+        <select id="siteLanguage" onchange="changeLanguage(this.value)">
+          <option value="en">English</option>
+          <option value="te">తెలుగు</option>
+          <option value="hi">हिन्दी</option>
+        </select>
+
     </nav>
 </header>
 
+
+<!-- HERO SECTION -->
 <section class="hero">
-
+   
     <div class="hero-content">
-        <h1>Farmer Service App</h1>
 
-        <p>
+        <h1 data-lang="title">
+            Farmer Service App
+        </h1>
+
+        <p data-lang="description">
             A digital platform connecting farmers with government
             schemes and agricultural services.
         </p>
 
         <div class="hero-buttons">
-            <a href="register.html" class="primary-btn">
-                Get Started
-            </a>
 
-            <a href="schemes.html" class="secondary-btn">
-                View Schemes
-            </a>
+           <a href="register.html" class="primary-btn">
+             Get Started
+           </a>
+
+           <a href="schemes.html" class="secondary-btn"
+              data-lang="viewSchemes">
+             View Schemes
+           </a>
+
+           <a href="ai-assistant.html"class="primary-btn">
+             🤖 AI Farmer Assistant
+           </a>
+
         </div>
     </div>
 
@@ -45,49 +67,90 @@
 
 <section class="features">
 
-    <h2>Our Services</h2>
+    <h2 data-lang="ourServices">
+        Our Services
+    </h2>
 
     <div class="feature-container">
 
         <div class="feature-card">
+
             <span>📋</span>
-            <h3>Government Schemes</h3>
-            <p>
+
+            <h3 data-lang="governmentSchemes">
+                Government Schemes
+            </h3>
+
+            <p data-lang="governmentSchemesText">
                 Find information about farmer-related government schemes.
             </p>
+
         </div>
 
+
         <div class="feature-card">
+
             <span>✅</span>
-            <h3>Eligibility</h3>
-            <p>
+
+            <h3 data-lang="eligibility">
+                Eligibility
+            </h3>
+
+            <p data-lang="eligibilityText">
                 Check eligibility requirements before applying.
             </p>
+
         </div>
 
+
         <div class="feature-card">
+
             <span>📄</span>
-            <h3>Documents</h3>
-            <p>
+
+            <h3 data-lang="documents">
+                Documents
+            </h3>
+
+            <p data-lang="documentsText">
                 View the documents required for different schemes.
             </p>
+
         </div>
 
+
         <div class="feature-card">
+
             <span>📊</span>
-            <h3>Track Application</h3>
-            <p>
+
+            <h3 data-lang="trackApplication">
+                Track Application
+            </h3>
+
+            <p data-lang="trackApplicationText">
                 Track the status of supported applications.
             </p>
+
         </div>
 
     </div>
 
 </section>
 
+
+<!-- FOOTER -->
 <footer>
-    <p>© 2026 Farmer Service App | Connecting Farmers with Government Services</p>
+
+    <p>
+        © 2026 Farmer Service App |
+        Connecting Farmers with Government Services
+    </p>
+
 </footer>
+
+
+<!-- VOICE AI JAVASCRIPT -->
+<script src="js/voice-ai.js"></script>
+<script scr="is/language.js"></script>
 
 </body>
 </html>
