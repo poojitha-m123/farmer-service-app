@@ -5,6 +5,7 @@
 const translations = {
 
     en: {
+        logo:"Farmer Service",
         home: "Home",
         schemes: "Schemes",
         login: "Login",
